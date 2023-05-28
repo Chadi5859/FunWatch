@@ -136,6 +136,17 @@
     if (username) {
       signupButton.style.display = 'none';
     }
+    document.addEventListener('keydown', function(event) {
+  // Check if Ctrl key and O key are pressed simultaneously
+  if (event.ctrlKey && event.key === 'o') {
+    // Hide the username element (assuming its id is "username")
+    document.getElementById('username').style.display = 'none';
+    
+    // Redirect to the login page
+    window.location.href = 'login.html';
+  }
+});
+
   </script>  
 </body>
 </html>
