@@ -89,16 +89,22 @@
   </div>
 
   <script>
-    function login() {
-      // Assuming you have retrieved the username from the input field
-      const username = document.getElementById('username').value;
+function login() {
+  // Retrieve the entered username and password
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  
+  // Check if the entered username and password match the expected values
+  // Replace "expectedUsername" and "expectedPassword" with the actual values used during signup
+  if (username === "expectedUsername" && password === "expectedPassword") {
+    // Successful login, redirect to the main page
+    window.location.href = "index.html";
+  } else {
+    // Login failed, display an alert message
+    alert("Login Failed");
+  }
+}
 
-      // Store the username in the session storage
-      sessionStorage.setItem('username', username);
-
-      // Redirect to the main page
-      window.location.href = 'index.html';
-    }
   </script>
 </body>
 </html>
