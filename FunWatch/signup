@@ -78,7 +78,7 @@
     <input type="password" id="password" name="password" placeholder="Enter your password">
 
     <div class="button-container">
-      <a href="login.html" class="button">Sign up</a>
+      <a href="login" class="button">Sign up</a>
     </div>
   </div>
 </body>
