@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FunWatch - Log In</title>
+  <style>
+    /* CSS styles go here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login-container {
+      width: 400px;
+      margin: 100px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #009933;
+      color: #ffffff;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .button:hover {
+      background-color: #007a22;
+    }
+
+    .username {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- Add more menu items if needed -->
+          </ul>
+        </nav>
+      </header>
+  <div class="login-container">
+    <h1>Log In</h1>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+    <div class="button-container">
+      <button onclick="login()" class="button">Log in</button>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      // Assuming you have retrieved the username from the input field
+      const username = document.getElementById('username').value;
+
+      // Store the username in the session storage
+      sessionStorage.setItem('username', username);
+
+      // Redirect to the main page
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+
